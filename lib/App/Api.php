@@ -10,7 +10,7 @@ namespace Limbonia\App;
  * @author Lonnie Blansett <lonnie@limbonia.tech>
  * @package Limbonia
  */
-class Api extends \Limbonia\App\Web
+class Api extends \Limbonia\App
 {
   protected static $hJsonData = null;
 
