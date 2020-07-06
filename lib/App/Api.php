@@ -118,8 +118,8 @@ class Api extends \Limbonia\App
   /**
    * Get the user associated with the specified auth_token and return it
    *
-   * @param type $sAuthToken
-   * @return type
+   * @param string $sAuthToken
+   * @return \Limbonia\Interfaces\Model\User
    */
   public function userByAuthToken($sAuthToken)
   {
@@ -132,7 +132,7 @@ class Api extends \Limbonia\App
    * Get the user associated with the specified API key and return it
    *
    * @param string $sApiKey
-   * @return \Limbonia\Model\User
+   * @return \Limbonia\Interfaces\Model\User
    */
   public function userByApiKey($sApiKey)
   {
@@ -144,7 +144,7 @@ class Api extends \Limbonia\App
     /**
    * Generate and return the current user
    *
-   * @return \Limbonia\Model\User
+   * @return \Limbonia\Interfaces\Model\User
    * @throws \Exception
    */
   protected function generateUser()
