@@ -9,7 +9,7 @@ namespace Limbonia\Controller;
  * @author Lonnie Blansett <lonnie@limbonia.tech>
  * @package Limbonia
  */
-class Api extends Base implements \Limbonia\Interfaces\Controller\Api
+class Api extends \Limbonia\Controller implements \Limbonia\Interfaces\Controller\Api
 {
   use \Limbonia\Traits\Controller\Api;
   use \Limbonia\Traits\DriverList;
