@@ -12,6 +12,15 @@ namespace Limbonia\Traits\Controller;
 trait ApiModel
 {
   /**
+   * Initialize this controller's custom data, if there is any
+   *
+   * @throws \Limbonia\Exception
+   */
+  protected function apiModelInit()
+  {
+  }
+
+  /**
    * Make sure a valid model is loaded
    *
    * @throws \Exception
