@@ -118,7 +118,7 @@ trait HasModel
     return $hList;
   }
 
-    /**
+  /**
    * Generate and return the default list of data, filtered and ordered by API controls
    *
    * @return array
@@ -269,7 +269,6 @@ trait HasModel
     return $this->processApiPutModel();
   }
 
-
   /**
    * Create the API specified model with the API specified data then return the created model
    *
@@ -281,7 +280,7 @@ trait HasModel
     $oModel = $this->modelFromArray($this->oRouter->data);
     $oModel->save();
     header('Location: ' . $this->oApp->getDomain()->currenturl . '/' . $this->oRouter->rawPath . '/' . $oModel->id);
-    return $oModel->getAll();
+    return $oModel;
   }
 
   /**
