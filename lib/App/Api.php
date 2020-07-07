@@ -83,13 +83,13 @@ class Api extends \Limbonia\App
       {
         self::$hControllerList[$sDriver] = \Limbonia\Controller\Api::factory($sType, $this);
       }
-      catch (\Throwable $th)
+      catch (\Throwable $e)
       {
         $oController = \Limbonia\Controller::factory($sType, $this);
 
         if (!($oController instanceof \Limbonia\Interfaces\Controller\Api))
         {
-          throw new \Limbonia\Exception("Controller does not implement \Limbonia\Interfaces\Controller\Api");
+          throw $e;
         }
     
         self::$hControllerList[$sDriver] = $oController;
