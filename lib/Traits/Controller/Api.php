@@ -116,6 +116,11 @@ trait Api
         return $this->processApiHead();
 
       case 'get':
+        if ($this->oRouter->action == 'components')
+        {
+          return $this->getComponents();
+        }
+    
         return $this->processApiGet();
 
       case 'put':
